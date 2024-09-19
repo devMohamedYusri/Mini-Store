@@ -8,12 +8,13 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css" />
 
     <title>Mini Store</title>
@@ -52,13 +53,23 @@
     </nav>
 
     <section class="home">
-        <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
-        <div class="content">
-            <h1 class="title">Your products are great.</h1>
-            <button class="btn">Shop Product</button>
-        </div>
-        <img src="./images/banner-image.png" alt="">
-        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+
+        <swiper-container class="mySwiper" navigation="true" pagination="true">
+            <swiper-slide class="slide">
+                <div class="content">
+                    <h1 class="title">Your products are great.</h1>
+                    <button class="btn">Shop Product</button>
+                </div>
+                <img src="./images/banner-image.png" alt="">
+            </swiper-slide>
+            <swiper-slide class="slide">
+                <div class="content">
+                    <h1 class="title">Your products are great.</h1>
+                    <button class="btn">Shop Product</button>
+                </div>
+                <img src="./images/banner-image.png" alt="">
+            </swiper-slide>
+        </swiper-container>
     </section>
     <!-- cards services -->
     <section class="cards-services">
@@ -220,7 +231,181 @@
             </div>
         </div>
     </section>
+    <!-- clients comments -->
+    <section class="clients-comments">
+        <i class="fa-solid fa-quote-right"></i>
+        <swiper-container class="mySwiper" navigation="true">
+            <swiper-slide>
+                <div class="client-comment">
+                    <p>"Absolutely outstanding product! It not only met but far exceeded my expectations in every
+                        aspect. The quality and functionality are truly impressive."</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="client-name">John Doe</p>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="client-comment">
+                    <p>"I'm thoroughly impressed with the exceptional customer service and lightning-fast shipping. The
+                        entire experience was smooth and hassle-free."</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="client-name">Jane Smith</p>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="client-comment">
+                    <p>"This innovative gadget has revolutionized my daily routine! It's incredibly efficient and has
+                        significantly improved my productivity. I can't imagine life without it now."</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="client-name">Mike Johnson</p>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="client-comment">
+                    <p>"Excellent value for money. The product offers a perfect balance of quality and affordability. I
+                        would highly recommend it to anyone looking for a reliable and cost-effective solution."</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="client-name">Sarah Williams</p>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="client-comment">
+                    <p>"I'm thoroughly impressed by the sleek and modern design, coupled with an incredibly intuitive
+                        user interface. It's a perfect blend of aesthetics and functionality that makes using this
+                        product a joy."</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="client-name">David Brown</p>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+    </section>
+    <!-- subscribe -->
+    <section class="subscribe">
+        <div class="content">
+            <h2>Subscribe us now</h2>
+            <p>Get the latest news and updates on our products and services</p>
+        </div>
+        <form>
+            <input type="email" placeholder="your email address here">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- shop insta -->
+    <section class="shop-insta">
+        <h2>Shop our Insta</h2>
+        <div class="insta-images">
+            <div><img src="./images/insta-item1.jpg" alt="insta image"></div>
+            <div><img src="./images/insta-item2.jpg" alt="insta image"></div>
+            <div><img src="./images/insta-item3.jpg" alt="insta image"></div>
+            <div><img src="./images/insta-item4.jpg" alt="insta image"></div>
+            <div><img src="./images/insta-item5.jpg" alt="insta image"></div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="topFoot">
+            <div class="side-section">
+                <img src="./images/main-logo.png" alt="store-logo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec odio nec nunc tincidunt
+                    eget li
+                </p>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            <div class="links-section">
+                <div class="quickLinks">
+                    <h3>quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">blogs</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+                <div class="helpInfo">
+                    <h3>Help & Info</h3>
+                    <ul>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">Returns Policies</a></li>
+                        <li><a href="#">Shipping + Delivery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Faqs</a></li>
+                    </ul>
+                </div>
+                <div class="contactUs">
+                    <h3>Contact Us</h3>
+                    <div class="contact">
+                        <p>Do you have any queries or suggestions?</p>
+                        <h4>yourinfo@gmail.com</h4>
+                    </div>
+                    <div class="contact">
+                        <p>If you need support? Just give us a call.</p>
+                        <h4>+55 111 222 333 44</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="shipping-info">
+                <p>We ship with:</p>
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                </div>
+            </div>
+            <div class="payment-info">
+                <p>Payment options:</p>
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-paypal"></i>
+                </div>
+            </div>
+            <div class="rights">
+                <p>&copy; Copyright 2024 MiniStore. Design by <span>Dev-Mohamed Yusri</span> </p>
+            <p>All rights reserved</p>
+            </div>
+        </div>
+    </footer>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>
