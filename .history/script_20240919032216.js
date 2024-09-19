@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Hide menus on window resize (for larger screens)
     window.addEventListener('resize', () => {
         if (window.innerWidth > 992) {
             navLinks.classList.remove('show');
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Lazy load images
     const images = document.querySelectorAll('img[data-src]');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {

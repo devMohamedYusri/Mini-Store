@@ -5,24 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropMenuP = document.querySelector('.drop-menu-p');
     const dropdown = document.querySelector('.dropdown');
 
+    // Create and add the navigation toggle button
     const navToggle = document.createElement('button');
     navToggle.className = 'nav-toggle';
     navToggle.innerHTML = '☰';
 
+    // Create a wrapper for the logo and toggle button
     const headerWrapper = document.createElement('div');
     headerWrapper.className = 'header-wrapper';
     headerWrapper.append(logo.cloneNode(true), navToggle);
     logo.replaceWith(headerWrapper);
 
+    // Toggle mobile menu on button click
     navToggle.addEventListener('click', () => {
         navLinks.classList.toggle('show');
     });
 
+    // Toggle dropdown menu
     dropMenuP.addEventListener('click', (e) => {
         e.preventDefault();
         dropdown.classList.toggle('show');
     });
 
+    // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target)) {
             navLinks.classList.remove('show');
@@ -30,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Hide menus on window resize (for larger screens)
     window.addEventListener('resize', () => {
         if (window.innerWidth > 992) {
             navLinks.classList.remove('show');
@@ -37,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Lazy load images
     const images = document.querySelectorAll('img[data-src]');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {

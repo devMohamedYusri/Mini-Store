@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Lazy load images
     const images = document.querySelectorAll('img[data-src]');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
